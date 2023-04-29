@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+<header>
+    <nav id="Profile_Nav">
+        <button class="Button_Nav" id="back" onclick="openProfileContainer(0);">
+            <img src="../images/back.png" class="icon">
+        </button>
+        <h1>MY PROFILE</h1>
+        <button class="Button_Nav" id="settings" onclick="openProfileContainer(2);">
+            <img src="../images/Settings.png" class="icon">
+        </button>
+    </nav>
+</header>
+<section id="Profile">
+    <div id="Identity_Container">
+        <div class="info">
+            <img id="Profile_Image" src="../images/profilePicture.png">
+            <label class="info_type_label">FULL NAME</label>
+        </div>
+        <br>
+    </div>
+    <div id="Profile_Container">
+        <div class="info">
+            <label class="info_type_label">USERNAME: </label>
+            <label class="info_label">USERNAME</label>
+        </div>
+        <br>
+        <div class="info">
+            <label class="info_type_label">EMAIL: </label>
+            <label class="info_label">EMAIL</label>
+        </div>
+        <br>
+        <div class="info">
+            <label class="info_type_label">ADDRESS: </label>
+            <label class="info_label">ADDRESS</label>
+        </div>
+        <br>
+    </div>
+    <div id="Edit_Container">
+
+        <button id="edit" onclick="openProfileContainer(1);">
+            <img src="../images/edit.png" id="edit_icon" class="icon">
+            <label for="edit">EDIT PROFILE</label>
+        </button>
+    </div>
+</section>
+
+
+<section id="EditProfile_Container" style="display: none">
+    <div class="editInfo">
+        <input type="text" name="FirstName" placeholder="FIRST NAME" class="EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="text" name="LastName" placeholder="LAST NAME" class="EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="text" name="Username" placeholder="USERNAME" class="EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="text" name="Email" placeholder="EMAIL" class="EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="text" name="Address" placeholder="ADDRESS" class="EditInput"> <br>
+    </div>
+    <div onclick="openProfileContainer(0);">
+        <input type="submit" value="CONFIRM" class="Confirm_Button Button_Edit"> <br>
+    </div>
+</section>
+
+<section id="Settings_Container" style="display: none">
+    <div class="Button_Settings">
+        <button id="password" onclick="openProfileContainer(3);">
+            <label for="password">CHANGE PASSWORD</label>
+        </button>
+    </div>
+    <div class="Button_Settings">
+        <button id="terms" onclick="openProfileContainer(0);">
+            <label for="terms">TERMS & CONDITIONS</label>
+        </button>
+    </div>
+    <div class="Button_Settings">
+        <button id="delete" onclick="openProfileContainer(0);">
+            <label for="delete">DELETE ACCOUNT</label>
+        </button>
+    </div>
+    <div class="Button_Settings">
+        <button id="logout" onclick="openProfileContainer(0);">
+            <label for="logout">LOG OUT</label>
+        </button>
+    </div>
+</section>
+
+<section id="EditPassword_Container" style="display: none">
+    <div class="editInfo">
+        <input type="text" name="OldPassword" placeholder="OLD PASSWORD" class="EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="text" name="NewPassword" placeholder="NEW PASSWORD" class="EditInput"> <br>
+    </div>
+    <div class="editInfo">
+        <input type="text" name="ConfirmPassword" placeholder="CONFIRM NEW PASSWORD" class="EditInput"> <br>
+    </div>
+    <div onclick="openProfileContainer(0);">
+        <input type="submit" value="CONFIRM CHANGES" class="Confirm_Button Button_Edit"> <br>
+    </div>
+</section>
+
+<script src="../js/profileScript.js"></script>
+</body>
+</html>
